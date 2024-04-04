@@ -1,7 +1,7 @@
 const {Server } = require('socket.io');
 
 const io = new Server(8001 , {
-    cors : {origin: '*',}
+    cors : {origin: '*'}
 });
 
 
