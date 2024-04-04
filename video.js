@@ -1,6 +1,6 @@
 const {Server } = require('socket.io');
 
-const io = new Server(8001 , {
+const io = new Server(process.env.PORT || 8001 , {
     cors : {origin: '*'}
 });
 
@@ -45,4 +45,4 @@ io.on("connection",(socket) => {
     })
 })
 
-console.log('ALl GOod');
+console.log('All Good , Server Started');
