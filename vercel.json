@@ -1,4 +1,3 @@
-
 {
     "version": 2,
     "headers": [
@@ -13,9 +12,10 @@
       }
     ],
     "builds": [
-      { "src": "video.js", "use": "@vercel/node" }
+      { "src": "expressVDO.js", "use": "@vercel/node" }
     ],
     "routes": [
-      { "src": "/(.*)", "dest": "video.js" }
-    ]
+        { "src": "/socket.io/(.*)", "dest": "expressVDO.js" },
+        { "src": "/(.*)", "dest": "expressVDO.js" }
+      ]
   }
