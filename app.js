@@ -13,6 +13,8 @@ const io = socketIO(server, {
 
 app.use(express.static('public'));
 
+
+
 const emailToSocketId = new Map();
 const socketToEmail = new Map();
 
@@ -54,4 +56,5 @@ const PORT = process.env.PORT || 8001;
 
 server.listen(PORT, () => {
   console.log('All Good , Server Started');
+  // resizeBy.send("Hello");
 });
